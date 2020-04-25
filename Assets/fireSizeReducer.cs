@@ -66,6 +66,7 @@ public class fireSizeReducer : MonoBehaviour
     {
         Debug.Log("GAMEOVER");
         yield return new WaitForSeconds(3f);
+        Cursor.lockState = CursorLockMode.None; Cursor.visible = true;
         SceneManager.LoadScene(0);
     }
 
@@ -74,5 +75,6 @@ public class fireSizeReducer : MonoBehaviour
         buttonToHide.SetActive(false);
         playerToEnable.SetActive(true);
         Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false;
     }
 }
